@@ -11,3 +11,7 @@ An easy, open source transcribing tool
 + notation
 + composition recognition
 + etc
+
+# DECL
+Thank you very much help from you:
+Ms Dong, Mr Yang, Mr Ding
