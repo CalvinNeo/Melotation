@@ -4,13 +4,13 @@ An easy, open source transcribing tool
 # FEATURES
 
 # TODO
-+ single tone pitching
-+ chord pitching
-+ note recognition(pitch, length, dynamics)
++ single sound pitching
+pppp+ note and chord recognition(pitch, length, dynamics)
 + multi-tone support
-+ notation
++ notation(and GUI)
 + composition recognition
-+ etc
++ grace note recognition
++ adaptive tuning
 
 # DECL
 Thank you very much help from you:

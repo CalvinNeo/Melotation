@@ -31,7 +31,7 @@ def index_to_name(index):
     '''
     return ['c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b'][index % 12] + str(index / 12 - 1)
 
-def assemble(lstnotes):
+def assemble(crtnotes, prevnotes):
     pass
 
 if __name__ == '__main__':
