@@ -52,6 +52,7 @@ def test_pitching(config, sr, data):
         try:
             sf, maxsf = 0, np.nonzero(np.abs(f-config.note_freq[-1])<config.freq_radius)[0][0]+1
         except IndexError:
+            # no suitable note
             return [],[],[]
         miu, sigma = np.mean(p[:maxsf]), np.std(p[:maxsf])
         for nf in xrange(len(config.note_freq)):
@@ -64,6 +65,7 @@ def test_pitching(config, sr, data):
         try:
             k_top = next(x for x in xrange(len(sorted_freq)) if p[sorted_freq[x]] < config.strength_thres*sigma+miu)
         except StopIteration:
+            # reach the end of array
             k_top = 1
         return sorted_note[0:k_top], [p[i] for i in sorted_freq[0:k_top]], [f[i] for i in sorted_freq[0:k_top]]
 
@@ -71,9 +73,9 @@ def test_pitching(config, sr, data):
     # sr, data = scipy.io.wavfile.read('TRIMED_CHORD_C.wav')
     # sr, data = scipy.io.wavfile.read('echdc.wav')
     size = data.shape[0]
-    Fs = sr #Sampling frequency
-    T = 1.0/Fs #Sampling period
-    L = size #Length of signal
+    Fs = sr # Sampling frequency
+    T = 1.0/Fs # Sampling period
+    L = size # Length of signal
     if L <= 0:
         return [],[],[] 
     t = np.arange(L) * T #Time vector

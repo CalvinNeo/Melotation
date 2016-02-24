@@ -7,6 +7,6 @@ class AdaptiveConfig:
         self.note_index = range(12,120)
         self.freq_radius = 1.2
         # self.music_sampling_time = 0.1 # second
-        self.music_sampling_frame = 6000 # frame
+        self.music_sampling_frame = 3000 # frame
         self.strength_thres = 10 # consider major if stregth level is above miu+sigma*strength_thres
 
