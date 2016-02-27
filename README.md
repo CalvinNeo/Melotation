@@ -5,13 +5,12 @@ An easy, open source transcribing tool
 
 # TODO
 + single sound pitching
-pppp+ note and chord recognition(pitch, length, dynamics)
-+ multi-tone support
++ note, dual-tone and chord recognition(pitch, length, dynamics)
 + notation(and GUI)
 + composition recognition
-+ grace note recognition
++ graces recognition(such as Trill, Appoggiatura)
 + adaptive tuning
 
-# DECL
+# Declarations
 Thank you very much help from you:
 Ms Dong, Mr Yang, Mr Ding

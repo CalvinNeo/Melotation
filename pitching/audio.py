@@ -100,6 +100,7 @@ def test_segmentation(config, sr, data):
         if set(notes) != prevfreq:
             print name
             prevfreq = set(notes)
+            
 if __name__ == '__main__':
     import time
     starttime = time.clock()
