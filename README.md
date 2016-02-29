@@ -2,13 +2,15 @@
 An easy, open source transcribing tool
 
 # FEATURES
++ single sound pitching and segmentation
++ note, dual-tone and chord annotation(pitch, length, dynamics)
 
 # TODO
-+ single sound pitching
-+ note, dual-tone and chord recognition(pitch, length, dynamics)
++ overtone filter
 + notation(and GUI)
 + composition recognition
 + graces recognition(such as Trill, Appoggiatura)
++ timbre(tone color) recognition
 + adaptive tuning
 
 # Declarations
