@@ -12,6 +12,9 @@ from ada_config import *
 from note import *
 
 def test_pitching(config, sr, data, show_outstanding_level=False):
+    '''
+        using ISTFT to annotate
+    '''
     def nextpow2(n):
         return int(2**np.ceil(np.log2(n)))
 
@@ -100,7 +103,8 @@ def test_pitching(config, sr, data, show_outstanding_level=False):
         Consider our sampling rate is usually 44100Hz, whose duration is 0.02ms
 
     '''
-    Y = pl.fft(data[:,0], n)
+    window = scipy.hanning(L) # using hanning windows function to calculate STFT
+    Y = pl.fft(window*data[:,0], n)
     P = np.abs(Y/n)
     f = np.arange(n/2)*1.0*Fs/n
     # f = np.array([Fs*i/n for i in range(n/2)])
@@ -134,7 +138,7 @@ if __name__ == '__main__':
     import time
     starttime = time.clock()
     # echdc escale_c escale_c_b
-    sr, data = scipy.io.wavfile.read('echdc.wav')
+    sr, data = scipy.io.wavfile.read('escale_c.wav')
     # print test_pitching(AdaptiveConfig(), sr, data, False)
     print test_segmentation(AdaptiveConfig(), sr, data)
 

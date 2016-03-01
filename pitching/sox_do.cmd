@@ -1,0 +1,1 @@
+sox -t raw -r 44100 -e signed -b 16 -c 1 --norm cscale.MID mid_cscale.wav

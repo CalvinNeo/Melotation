@@ -55,6 +55,6 @@ docs/_build/
 
 # PyBuilder
 target/
-
 support/
 *.lnk
+*.csv
